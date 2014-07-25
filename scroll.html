@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scroll</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="scroll.js"></script>
+	<style>
+	html, body {
+		height: 100%;
+	}
+
+	/* We need something to scroll */
+	.scroller {
+		height: 600%;
+		-webkit-overflow-scrolling: none;
+	}
+
+	.slide_range {
+		position: fixed;
+		left: 50%;
+		top: 20%;
+		height: 60%;
+		width: 0;
+	}
+
+	/* .slider is the centre of figure moving along .slide_range */
+	.slider {
+		position: absolute;
+		height: 0;
+		width: 0;
+	}
+
+	canvas {
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<div class="scroller"></div>
+	<div class="slide_range">
+		<div class="slider">
+			<canvas id="figure"></canvas>
+		</div>
+	</div>	
+</body>
+</html>
